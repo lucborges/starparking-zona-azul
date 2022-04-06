@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF"
+    android:gravity="center"
+    tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Situação do veículo"
+        android:gravity="center"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="-20dp"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:fontFamily="@font/lobster_regular"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="14dp"
+        android:text="Pesquisar a situação do veículo"/>
+
+    <TextView
+        android:layout_width="222dp"
+        android:layout_height="wrap_content"
+        android:text="Placa do carro:"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPlacaSituacao"
+            android:layout_width="222dp"
+            android:layout_height="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPesquisarSituacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesquisar" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
