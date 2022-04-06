@@ -4,18 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.IrregularityFragment">
+    tools:context=".MapActivity">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/irregularity"
+        android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:text="Irregularity"
+        android:text="Search"
         android:textSize="36sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
