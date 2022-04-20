@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:text="Acessar"
         android:layout_gravity="center"
-        android:backgroundTint="@color/blue_700"
+        android:backgroundTint="@color/blue_primary"
         />
 
 
@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:text="Acessar"
         android:layout_gravity="center"
-        android:backgroundTint="@color/blue_700"
+        android:backgroundTint="@color/blue_primary"
         />
 
 

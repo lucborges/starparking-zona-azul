@@ -39,14 +39,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginEnd="55dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPlaca"
-            android:layout_width="222dp"
-            android:gravity="center"
-            android:layout_height="40dp" />
+            android:layout_width="230dp"
+            android:layout_height="60dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPlaca"
@@ -85,6 +83,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirmar"
-        app:backgroundTint="@color/blue_700"/>
+        app:backgroundTint="@color/blue_primary"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

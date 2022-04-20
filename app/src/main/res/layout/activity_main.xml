@@ -71,9 +71,7 @@
         android:backgroundTint="@color/green_card"
         android:layout_marginTop="25dp"
         android:layout_gravity="center"
-        style="@style/CardView"
-        app:checkedIcon="@drawable/outline_block_24"
-        app:checkedIconMargin="10dp">
+        style="@style/CardView">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -106,7 +104,7 @@
         android:layout_height="wrap_content"
         android:text="Acessar"
         android:layout_gravity="center"
-        android:backgroundTint="@color/blue_700"
+        android:backgroundTint="@color/blue_primary"
         />
 
 
@@ -154,7 +152,7 @@
         android:layout_height="wrap_content"
         android:text="Acessar"
         android:layout_gravity="center"
-        android:backgroundTint="@color/blue_700"
+        android:backgroundTint="@color/blue_primary"
         />
 
 
@@ -200,7 +198,7 @@
         android:layout_height="wrap_content"
         android:text="Acessar"
         android:layout_gravity="center"
-        android:backgroundTint="@color/blue_700"
+        android:backgroundTint="@color/blue_primary"
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
