@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.starparkingzonaazul.databinding.ActivitySelecaoFotoBinding
 
-class SelecaoFotoActivity : AppCompatActivity() {
+class  SelecaoFotoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySelecaoFotoBinding
 

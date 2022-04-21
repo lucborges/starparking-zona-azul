@@ -17,12 +17,21 @@ class IrregularityActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.acessButtonRegister.setOnClickListener{
-            acessRegistrarIrregularidade()
+            acessRegister()
+        }
+
+        binding.acessButtonConsult.setOnClickListener{
+            acessConsult()
         }
     }
 
-    private fun acessRegistrarIrregularidade(){
-        val intent = Intent(this, RegistrarIrregularidadeActivity::class.java)
-        startActivity(intent)
+    private fun acessRegister(){
+        val intentRegister = Intent(this, RegistrarIrregularidadeActivity::class.java)
+        startActivity(intentRegister)
+    }
+
+    private fun acessConsult(){
+        val intentConsult = Intent(this, SearchActivity::class.java)
+        startActivity(intentConsult)
     }
 }

@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:padding="25dp"
+    android:padding="30dp"
     tools:context=".SelecaoFotoActivity">
-    
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
         android:layout_width="match_parent"
@@ -24,13 +24,12 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:text="Preview das Fotos"
-                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textAppearance="?attr/textAppearanceHeadline5"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:text="Tire as fotos da maneira"
                 android:textAppearance="?attr/textAppearanceBody2"
                 android:textColor="?android:attr/textColorSecondary"
@@ -67,8 +66,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgFrente"
         android:text="Foto de frente do carro"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/imgLadoDireito"/>
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/imgLadoDireito"/>
 
 
     <!-- Imagem lado direito do carro  -->
@@ -87,7 +86,7 @@
         android:layout_height="wrap_content"
         android:text="Foto lado direito do carro"
         android:layout_below="@id/imgLadoDireito"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentEnd="true" />
 
 
 
@@ -100,8 +99,8 @@
         android:layout_height="149dp"
         app:srcCompat="@drawable/carro_lado_esquerdo"
         android:layout_below="@id/text_frente"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/imgTras"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/imgTras"
         tools:ignore="MissingConstraints"/>
 
     <TextView
@@ -109,8 +108,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Foto lado esquerdo do carro"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/text_tras"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/text_tras"
         android:layout_below="@+id/imgLadoEsquerdo"/>
 
 
@@ -121,7 +120,7 @@
         android:layout_width="156dp"
         android:layout_height="149dp"
         android:layout_below="@id/text_direito"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         app:srcCompat="@drawable/carro_tras"
         tools:ignore="MissingConstraints"/>
 
@@ -130,7 +129,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imgTras"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:text="Foto de tras do carro"
         tools:ignore="MissingConstraints"/>
 
@@ -149,7 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
             android:layout_below="@+id/text_tras"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:backgroundTint="@color/blue_primary"
             android:text="Okay" />
 

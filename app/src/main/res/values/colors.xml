@@ -8,6 +8,7 @@
     <color name="blue_200">#90caf9</color>
     <color name="blue_700_dark">#004ba0</color>
     <color name="blue_200_dark">#5d99c6</color>
+    <color name="transparent">#00ff0080</color>
     <color name="green_card">#82FB95</color>
     <color name="yellow_card">#FFDE8A</color>
     <color name="red_card">#FE988B</color>

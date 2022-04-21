@@ -16,7 +16,6 @@ import com.google.firebase.functions.ktx.functions
 import com.google.firebase.ktx.Firebase
 
 class RegistrarIrregularidadeActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityRegistrarIrregularidadeBinding
     private val logEntry = "CADASTRO_PLACA"
     private lateinit var functions: FirebaseFunctions
@@ -27,9 +26,9 @@ class RegistrarIrregularidadeActivity : AppCompatActivity() {
 
         binding = ActivityRegistrarIrregularidadeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        functions = Firebase.functions("southamerica-east1")
+        functions = Firebase.functions("southamerica-east1")
 
-        binding.btnPlaca.setOnClickListener{
+        binding.btnConfirmar.setOnClickListener{
 
             val p = Placa(binding.etPlaca.text.toString().toDouble())
             cadastrarPlaca(p)
@@ -51,7 +50,7 @@ class RegistrarIrregularidadeActivity : AppCompatActivity() {
 
                         val insertInfo = gson.fromJson(genericResp.payload.toString(), GenericInsertResponse::class.java)
 
-                        Snackbar.make(binding.btnPlaca, "Placa cadastrada: " + insertInfo.docId,
+                        Snackbar.make(binding.btnConfirmar, "Placa cadastrada: " + insertInfo.docId,
                             Snackbar.LENGTH_LONG).show();
                         binding.etPlaca.text!!.clear()
                     }
