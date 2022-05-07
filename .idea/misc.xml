@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.358974358974359" />
         <entry key="..\:/Users/Lucas/AndroidStudioProjects/StarparkingZonaAzul/app/src/main/res/drawable/bottomnav_bg.xml" value="0.209" />
         <entry key="..\:/Users/Lucas/AndroidStudioProjects/StarparkingZonaAzul/app/src/main/res/drawable/btnredondo.xml" value="0.179" />
         <entry key="..\:/Users/Lucas/AndroidStudioProjects/StarparkingZonaAzul/app/src/main/res/drawable/carro_frente.xml" value="0.179" />
@@ -29,13 +30,21 @@
         <entry key="..\:/Users/Lucas/AndroidStudioProjects/StarparkingZonaAzul/app/src/main/res/layout/fragment_map.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/Lucas/AndroidStudioProjects/StarparkingZonaAzul/app/src/main/res/layout/pesquisar_situacao.xml" value="0.25" />
         <entry key="..\:/Users/Lucas/AndroidStudioProjects/StarparkingZonaAzul/app/src/main/res/menu/menu.xml" value="0.3489583333333333" />
+        <entry key="app/src/main/res/drawable/outline_add_24.xml" value="0.274" />
+        <entry key="app/src/main/res/drawable/outline_block_24.xml" value="0.2575" />
+        <entry key="app/src/main/res/drawable/outline_check_circle_24.xml" value="0.308" />
+        <entry key="app/src/main/res/drawable/outline_home_24.xml" value="0.2575" />
+        <entry key="app/src/main/res/drawable/outline_location_on_24.xml" value="0.2575" />
+        <entry key="app/src/main/res/drawable/outline_map_24.xml" value="0.3075" />
+        <entry key="app/src/main/res/drawable/outline_search_24.xml" value="0.2575" />
+        <entry key="app/src/main/res/drawable/search-48px.xml" value="0.2575" />
         <entry key="app/src/main/res/layout-v31/pesquisar_situacao.xml" value="0.33697916666666666" />
         <entry key="app/src/main/res/layout/activity_camera_preview.xml" value="0.33697916666666666" />
         <entry key="app/src/main/res/layout/activity_irregularity.xml" value="0.3375" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_map.xml" value="0.33697916666666666" />
         <entry key="app/src/main/res/layout/activity_registrar_irregularidade.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_search.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_selecao_foto.xml" value="0.33" />
         <entry key="app/src/main/res/layout/pesquisar_situacao.xml" value="0.33697916666666666" />
       </map>

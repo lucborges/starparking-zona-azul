@@ -12,5 +12,12 @@
     <color name="green_card">#82FB95</color>
     <color name="yellow_card">#FFDE8A</color>
     <color name="red_card">#FE988B</color>
+    <color name="icon_map">#45B657</color>
+    <color name="icon_search">#DDB44B</color>
+    <color name="icon_irregularity">#D96251</color>
+    <color name="white_gray">#F0F0F0</color>
+    <color name="green_check">#4ECB71</color>
+    <color name="cancel_button">#DC4141</color>
+    <color name="confirm_button">#0EC135</color>
 
 </resources>

@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Placa do carro:"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="5dp"
         android:textAppearance="?attr/textAppearanceHeadline6"/>
 
@@ -69,11 +69,49 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escolha o tipo de irregularidade:"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textSize="18dp">
+
+        </TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tempo excedido"
+                android:buttonTint="@color/blue_700">
+
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Veículo em local proibido"
+                android:buttonTint="@color/blue_700">
+
+            </RadioButton>
+        </RadioGroup>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
     <TextView
         android:layout_width="222dp"
         android:layout_height="wrap_content"
         android:text="Fotos:"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="55dp"
         android:textAppearance="?attr/textAppearanceHeadline6" />
 
@@ -91,7 +129,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="55dp"
         android:textColor="?android:attr/textColorSecondary"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="50dp"
         android:text="Envie 4 fotos bem definidas do veículo"/>
 
     <com.google.android.material.button.MaterialButton

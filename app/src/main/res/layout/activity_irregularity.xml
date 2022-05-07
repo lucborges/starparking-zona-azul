@@ -63,16 +63,26 @@
 
     <!--  Card Register  -->
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="35dp"
+        android:text="Registrar"
+        android:textSize="15dp"
+        style="@style/TextAppearance.MaterialComponents.Headline6">
+
+    </TextView>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/register_card"
         android:layout_width="350dp"
         android:layout_height="80dp"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/green_card"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="3dp"
         android:layout_gravity="center"
         style="@style/CardView"
-        app:checkedIcon="@drawable/outline_block_24"
         app:checkedIconMargin="10dp">
 
         <LinearLayout
@@ -80,20 +90,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Registrar"
-                android:layout_margin="5dp">
-            </TextView>
+                android:src="@drawable/outline_add_24"
+                android:padding="4dp"
+                app:tint="@color/icon_map">
 
+            </ImageView>
 
         </LinearLayout>
 
@@ -109,8 +113,18 @@
         android:backgroundTint="@color/blue_primary"
         />
 
-
     <!--    Card Consult    -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="35dp"
+        android:text="Consultar"
+        android:textSize="15dp"
+        style="@style/TextAppearance.MaterialComponents.Headline6">
+
+    </TextView>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/consult_card"
@@ -118,7 +132,7 @@
         android:layout_height="80dp"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/yellow_card"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="3dp"
         android:layout_gravity="center">
 
         <LinearLayout
@@ -126,25 +140,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Consultar"
-                android:layout_margin="5dp"
-                >
-            </TextView>
+                android:src="@drawable/outline_search_24"
+                android:padding="8dp"
+                app:tint="@color/icon_search">
 
+            </ImageView>
 
         </LinearLayout>
-
-
 
     </com.google.android.material.card.MaterialCardView>
 

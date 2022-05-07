@@ -2,14 +2,6 @@ package com.example.starparkingzonaazul
 
 import com.google.gson.annotations.SerializedName
 
-/***
- * Como adotamos um padrão sempre de respostas
- * lá nas "Firebase Functions",
- * sempre teremos um "JSON" genérico.
- * Com isso podemos tratar cada resposta especificamente
- * a partir desta.
- * @author Mateus Dias
- */
 class FunctionsGenericResponse {
 
     enum class StatusType(val type: String) {

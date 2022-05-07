@@ -50,7 +50,6 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,7 +65,7 @@
             android:layout_gravity="center"
             android:layout_width="325dp"
             android:layout_height="55dp"
-            android:hint="Buscar..."
+            android:hint="ABC-1234"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -79,5 +78,135 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         app:backgroundTint="@color/blue_primary" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/returnCard"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginTop="20dp"
+        app:strokeColor="@color/white_gray"
+        android:visibility="invisible"
+        app:strokeWidth="2dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/outline_check_circle_24"
+            android:layout_gravity="center"
+            android:layout_marginBottom="60dp"
+            app:tint="@color/green_check">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:text="Consulta realizada com sucesso!"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15dp">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="95dp">
+
+            <TextView
+                android:id="@+id/placaField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginTop="2dp"
+                android:textSize="14dp"
+                android:textColor="@color/black">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/condicaoField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:textSize="14dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/dataField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"
+                android:textSize="14dp">
+            </TextView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/returnIrregular"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="invisible"
+        app:strokeColor="@color/white">
+
+        <TextView
+            android:id="@+id/responseField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginBottom="55dp"
+            android:text="Veículo irregular, deseja registrar uma irregularidade?"
+            android:textSize="14dp"
+            android:layout_gravity="center">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancellButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="75dp"
+                android:text="Não"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/cancel_button"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/confirmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sim"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/confirm_button"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

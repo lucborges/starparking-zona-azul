@@ -63,35 +63,40 @@
 
     <!--  Card Maps  -->
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="35dp"
+        android:text="Mapa"
+        android:textSize="15dp"
+        style="@style/TextAppearance.MaterialComponents.Headline6">
+
+    </TextView>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/map_card"
         android:layout_width="350dp"
         android:layout_height="80dp"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/green_card"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="3dp"
         android:layout_gravity="center"
-        style="@style/CardView">
+        style="icon">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mapa"
-                android:layout_margin="5dp">
-            </TextView>
+                android:src="@drawable/outline_map_24"
+                android:padding="8dp"
+                app:tint="@color/icon_map">
 
+            </ImageView>
 
         </LinearLayout>
 
@@ -110,13 +115,24 @@
 
     <!--    Card Consultas    -->
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="35dp"
+        android:text="Consultas"
+        android:textSize="15dp"
+        style="@style/TextAppearance.MaterialComponents.Headline6">
+
+    </TextView>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/search_card"
         android:layout_width="350dp"
         android:layout_height="80dp"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/yellow_card"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="3dp"
         android:layout_gravity="center">
 
         <LinearLayout
@@ -124,24 +140,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Consultas"
-                android:layout_margin="5dp"
-                >
-            </TextView>
+                android:src="@drawable/outline_search_24"
+                android:padding="8dp"
+                app:tint="@color/icon_search">
 
+            </ImageView>
 
         </LinearLayout>
-
 
 
     </com.google.android.material.card.MaterialCardView>
@@ -158,13 +166,24 @@
 
     <!--    Card Irregularidades    -->
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="35dp"
+        android:text="Irregularidades"
+        android:textSize="15dp"
+        style="@style/TextAppearance.MaterialComponents.Headline6">
+
+    </TextView>
+
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/irregularity_card"
         android:layout_width="350dp"
         android:layout_height="80dp"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/red_card"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="3dp"
         android:layout_gravity="center">
 
         <LinearLayout
@@ -172,23 +191,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Irregularidades"
-                android:layout_margin="5dp">
-            </TextView>
+                android:src="@drawable/outline_block_24"
+                android:padding="8dp"
+                app:tint="@color/icon_irregularity">
 
+            </ImageView>
 
         </LinearLayout>
-
 
     </com.google.android.material.card.MaterialCardView>
 
