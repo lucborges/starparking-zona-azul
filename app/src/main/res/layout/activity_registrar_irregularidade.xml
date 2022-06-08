@@ -14,13 +14,12 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="20dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -42,61 +41,90 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Placa do carro:"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="5dp"
-        android:textAppearance="?attr/textAppearanceHeadline6"/>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        app:boxCornerRadiusBottomEnd="20dp"
-        app:boxCornerRadiusBottomStart="20dp"
-        app:boxCornerRadiusTopEnd="20dp"
-        app:boxCornerRadiusTopStart="20dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPlaca"
-            android:layout_width="200dp"
-            android:layout_height="55dp"
-            android:hint="Digite..."
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
+            <!--  Placa do carro  -->
+   <androidx.appcompat.widget.LinearLayoutCompat
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginTop="1dp">
 
     <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layout_placa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="25dp">
+        android:layout_gravity="start"
+        android:layout_below="@+id/card"
+        android:orientation="vertical">
+
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Escolha o tipo de irregularidade:"
+            android:text="Placa do carro"
+            android:textSize="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="5dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusTopStart="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPlaca"
+                android:layout_width="140dp"
+                android:layout_height="55dp"
+                android:hint="Digite..."
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <!--  Tipo de Irregularidade  -->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layout_irregularidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="end"
+        android:layout_marginStart="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Tipo de irregularidade"
             style="@style/TextAppearance.MaterialComponents.Headline6"
-            android:textSize="18dp">
+            android:textSize="16dp">
 
         </TextView>
 
         <RadioGroup
+            android:id="@+id/radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <RadioButton
+                android:id="@+id/radio_button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tempo excedido"
+                android:layout_marginBottom="-10dp"
                 android:buttonTint="@color/blue_700">
 
             </RadioButton>
 
             <RadioButton
+                android:id="@+id/radio_button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Veículo em local proibido"
@@ -106,37 +134,111 @@
         </RadioGroup>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+   </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <TextView
-        android:layout_width="222dp"
-        android:layout_height="wrap_content"
-        android:text="Fotos:"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="55dp"
-        android:textAppearance="?attr/textAppearanceHeadline6" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnOpenCamera"
-        android:layout_width="150dp"
-        android:layout_height="85dp"
-        app:icon="@drawable/ic_baseline_add_a_photo_24"
-        app:iconGravity="top"
-        android:backgroundTint="@color/blue_700"
-        android:text="Abrir câmera"/>
+        <!--  FOTOS DO VEÍCULO  -->
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="55dp"
-        android:textColor="?android:attr/textColorSecondary"
-        android:layout_marginBottom="50dp"
-        android:text="Envie 4 fotos bem definidas do veículo"/>
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fotos do veículo"
+            android:layout_marginStart="95dp"
+            android:textAppearance="?attr/textAppearanceHeadline6" />
+
+        <!-- Imagem frente do carro -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgFrente"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="25dp"
+            android:layout_toLeftOf="@+id/imgLadoDireito"
+            app:srcCompat="@drawable/carro_frente" />
+
+        <TextView
+            android:id="@+id/text_frente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgFrente"
+            android:text="Foto de frente do carro"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imgLadoDireito"/>
+
+
+        <!-- Imagem lado direito do carro  -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgLadoDireito"
+            android:layout_width="165dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            app:srcCompat="@drawable/carro_direita" />
+
+        <TextView
+            android:id="@+id/text_direito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foto lado direito do carro"
+            android:layout_below="@id/imgLadoDireito"
+            android:layout_alignParentEnd="true" />
+
+        <!--  Imagem lado esquerdo -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgLadoEsquerdo"
+            android:layout_width="165dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/text_frente"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imgTras"
+            app:srcCompat="@drawable/carro_esquerda"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_esquerda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgLadoEsquerdo"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/text_tras"
+            android:text="Foto lado esquerdo do carro" />
+
+
+        <!-- Imagem posterior do carro  -->
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgTras"
+            android:layout_width="165dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/text_direito"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/carro_tras"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_tras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgTras"
+            android:layout_alignParentEnd="true"
+            android:text="Foto de tras do carro     "
+            tools:ignore="MissingConstraints" />
+
+    </RelativeLayout>
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnConfirmar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Confirmar"
+        android:layout_marginTop="15dp"
         android:layout_gravity="center"
         app:backgroundTint="@color/blue_primary" />
 

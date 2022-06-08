@@ -1,11 +1,18 @@
 package com.example.starparkingzonaazul
 
+import android.app.Activity
+import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.Color
+import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.ColorDrawable
+import android.media.Image
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.camera.core.CameraSelector
@@ -16,7 +23,11 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import com.example.starparkingzonaazul.databinding.ActivityCameraPreviewBinding
+import com.google.android.material.imageview.ShapeableImageView
 import com.google.common.util.concurrent.ListenableFuture
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
+import java.io.ByteArrayOutputStream
 import java.io.File
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -28,23 +39,22 @@ class CameraPreviewActivity : AppCompatActivity() {
     private lateinit var cameraSelector: CameraSelector
     private var imageCapture: ImageCapture?= null
     private lateinit var imgCaptureExecutor: ExecutorService
+    private lateinit var imageView: ShapeableImageView
+    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraPreviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         cameraProviderFuture = ProcessCameraProvider.getInstance(this)
         cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
         imgCaptureExecutor= Executors.newSingleThreadExecutor()
-
+        
         startCamera()
 
         binding.btnTakePhoto.setOnClickListener {
             takePhoto()
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-                blinkPreview()
-            }
+            blinkPreview()
         }
     }
 
@@ -59,9 +69,7 @@ class CameraPreviewActivity : AppCompatActivity() {
                 it.setSurfaceProvider(binding.cameraPreview.surfaceProvider)
 
             }
-
             try{
-                // abrir o preview.
                 cameraProvider.unbindAll()
                 cameraProvider.bindToLifecycle(this, cameraSelector, preview, imageCapture)
 
@@ -69,24 +77,26 @@ class CameraPreviewActivity : AppCompatActivity() {
                 Log.e("CameraPreview", "Falha ao abrir a camera.")
             }
         }, ContextCompat.getMainExecutor(this))
-
     }
 
     private fun takePhoto(){
-        // codigo para "tirar a foto".
         imageCapture?.let {
 
-            // nome do arquivo para gravar a foto.
             val fileName = "FOTO_JPEG_${System.currentTimeMillis()}"
             val file = File(externalMediaDirs[0], fileName)
-
             val outputFileOptions = ImageCapture.OutputFileOptions.Builder(file).build()
+
             it.takePicture(
                 outputFileOptions,
                 imgCaptureExecutor,
                 object: ImageCapture.OnImageSavedCallback {
                     override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
                         Log.i("CameraPreview", "A imagem foi salva no diretório: ${file.toUri()}")
+                        val intent = Intent()
+                        intent.data = Uri.parse(file.toString())
+                        setResult(Activity.RESULT_OK, intent)
+                        finish()
+                        finish()
 
                     }
 

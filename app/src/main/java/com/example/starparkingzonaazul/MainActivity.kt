@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun acessMap(){
-        val intentMap = Intent(this, MapActivity::class.java)
+        val intentMap = Intent(this, MapsActivity::class.java)
         startActivity(intentMap)
     }
 

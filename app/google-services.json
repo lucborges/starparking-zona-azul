@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "291474849498",
+    "firebase_url": "https://starparking-zona-azul-default-rtdb.firebaseio.com",
     "project_id": "starparking-zona-azul",
     "storage_bucket": "starparking-zona-azul.appspot.com"
   },

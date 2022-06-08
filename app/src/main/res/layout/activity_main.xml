@@ -66,7 +66,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="35dp"
         android:text="Mapa"
         android:textSize="15dp"
@@ -77,7 +77,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/map_card"
         android:layout_width="350dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/green_card"
         android:layout_marginTop="3dp"
@@ -118,7 +118,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="35dp"
         android:text="Consultas"
         android:textSize="15dp"
@@ -129,7 +129,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/search_card"
         android:layout_width="350dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/yellow_card"
         android:layout_marginTop="3dp"
@@ -169,7 +169,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="12dp"
         android:layout_marginLeft="35dp"
         android:text="Irregularidades"
         android:textSize="15dp"
@@ -180,7 +180,7 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/irregularity_card"
         android:layout_width="350dp"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         tools:ignore="MissingConstraints"
         android:backgroundTint="@color/red_card"
         android:layout_marginTop="3dp"

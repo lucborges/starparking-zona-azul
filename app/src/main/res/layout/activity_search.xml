@@ -14,7 +14,7 @@
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,7 +53,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="20dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:boxCornerRadiusBottomEnd="20dp"
         app:boxCornerRadiusBottomStart="20dp"
@@ -61,9 +61,9 @@
         app:boxCornerRadiusTopStart="20dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPlaca"
+            android:id="@+id/searchPlaca"
             android:layout_gravity="center"
-            android:layout_width="325dp"
+            android:layout_width="250dp"
             android:layout_height="55dp"
             android:hint="ABC-1234"
             />
@@ -75,7 +75,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="Pesquisar"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center"
         app:backgroundTint="@color/blue_primary" />
 
@@ -83,7 +83,7 @@
         android:id="@+id/returnCard"
         android:layout_width="match_parent"
         android:layout_height="175dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:strokeColor="@color/white_gray"
         android:visibility="invisible"
         app:strokeWidth="2dp"

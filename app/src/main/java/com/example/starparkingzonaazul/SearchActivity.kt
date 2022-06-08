@@ -2,6 +2,7 @@ package com.example.starparkingzonaazul
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -18,11 +19,9 @@ import com.google.firebase.functions.FirebaseFunctionsException
 import com.google.firebase.functions.ktx.functions
 import com.google.firebase.ktx.Firebase
 import com.google.gson.GsonBuilder
-import java.time.Instant
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
-import java.util.*
 
 class SearchActivity : AppCompatActivity() {
     private lateinit var etPlaca: TextInputEditText
@@ -39,14 +38,14 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var functions: FirebaseFunctions
     private val gson = GsonBuilder().enableComplexMapKeySerialization().create()
 
-    @SuppressLint("SetTextI18n")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_StarparkingZonaAzul)
         setContentView(R.layout.activity_search)
 
         functions = Firebase.functions("southamerica-east1")
-        etPlaca = findViewById(R.id.etPlaca)
+        etPlaca = findViewById(R.id.searchPlaca)
         btnPesquisar = findViewById(R.id.btnPesquisar)
         returnCard = findViewById(R.id.returnCard)
         placaField = findViewById(R.id.placaField)
@@ -80,25 +79,28 @@ class SearchActivity : AppCompatActivity() {
 
                         val payload = genericResp.payload.toString()
                         if (payload == "Veículo irregular"){
+                            closeKeyBoard()
                             returnCard.setVisibility(View.VISIBLE)
                             placaField.text = "Placa: ${etPlaca.text}"
                             condicaoField.text = "Condição: Veículo irregular"
                             dataField.text = "Data: $data"
                             responseField.text = "Veículo irregular, deseja registrar uma irregularidade?"
                             returnIrregular.setVisibility(View.VISIBLE)
-                            closeKeyBoard()
+                            confirmButton.setOnClickListener {
+                                redirecionarIrregularidade()
+                            }
 
                         } else if (payload == "Veículo regular"){
+                            closeKeyBoard()
                             returnCard.setVisibility(View.VISIBLE)
                             placaField.text = "Placa: ${etPlaca.text}"
                             condicaoField.text = "Condição: Veículo regular"
                             dataField.text = "Data: $data"
                             returnIrregular.setVisibility(View.INVISIBLE)
-                            closeKeyBoard()
                         }
                         else {
-                            Snackbar.make(btnPesquisar,"Ocorreu um erro, tente novamente.",Snackbar.LENGTH_LONG).show()
                             closeKeyBoard()
+                            Snackbar.make(btnPesquisar,"Ocorreu um erro: ${payload}", Snackbar.LENGTH_LONG).show()
                             returnIrregular.setVisibility(View.INVISIBLE)
                             returnCard.setVisibility(View.INVISIBLE)
                         }
@@ -119,6 +121,11 @@ class SearchActivity : AppCompatActivity() {
                 val res = gson.toJson(task.result?.data)
                 res
             }
+    }
+
+    private fun redirecionarIrregularidade() {
+        val intentIrregularidade = Intent(this, RegistrarIrregularidadeActivity::class.java)
+        startActivity(intentIrregularidade)
     }
 
     private fun closeKeyBoard() {
